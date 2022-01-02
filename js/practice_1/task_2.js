@@ -30,7 +30,7 @@ for (let i = 0; i < 2; i++) {
     let lastFilm = prompt('Один из последних просмотренных фильмов?', '');
     let grade = +prompt('На сколько оцените его?', '');
     console.log(lastFilm);
-    if (lastfilm != null && grade != null && lastFilm == '' && lastFilm.length > 50) {
+    if (lastFilm != null && grade != null && lastFilm == '' && lastFilm.length > 50) {
         i--;
         continue;
     }
