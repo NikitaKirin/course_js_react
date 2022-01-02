@@ -28,11 +28,12 @@ let personalMovieDB = {
 
 for (let i = 0; i < 2; i++) {
     let lastFilm = prompt('Один из последних просмотренных фильмов?', '');
-    if (lastFilm == '' || lastFilm.length > 50) {
+    let grade = +prompt('На сколько оцените его?', '');
+    console.log(lastFilm);
+    if (lastfilm != null && grade != null && lastFilm == '' && lastFilm.length > 50) {
         i--;
         continue;
     }
-    let grade = +prompt('На сколько оцените его?', '');
     personalMovieDB.movies[lastFilm] = grade;
 }
 
@@ -40,7 +41,7 @@ const count = personalMovieDB.count;
 
 if (count < 10) {
     alert("Просмотрено довольно мало фильмов");
-} else if (count <= 30) {
+} else if (count >= 10 && count <= 30) {
     alert("Вы классический зритель");
 } else if (count > 30) {
     alert("Вы киноман");
